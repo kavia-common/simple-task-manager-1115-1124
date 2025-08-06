@@ -1,82 +1,63 @@
-# Lightweight React Template for KAVIA
+# Todo Frontend (React) for Simple Task Manager
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+This is a modern, lightweight React-based Todo web app UI with the following features:
+- **Create todos**
+- **Edit todos by double-click or using the edit button**
+- **Delete todos**
+- **Mark as completed or active**
+- **Filter by all, completed, or active**
+- **Stylish, modern, fully responsive, and accessible interface**
+- **Custom colors:**  
+  - Primary: `#1976d2`  
+  - Accent: `#ff9800`  
+  - Secondary: `#424242`  
 
-## Features
+## Layout Overview
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Header**: App title and subtitle
+- **Main**: 
+  - Input at the top for adding new todos
+  - Filter buttons and clear-completed button
+  - Vertical todo item list with edit/delete/completion action buttons
 
 ## Getting Started
 
-In the project directory, you can run:
+```sh
+npm install
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-### `npm start`
+### Running tests
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```sh
+npm test
 ```
 
-### Components
+### Build for production
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+```sh
+npm run build
+```
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+## API Integration
 
-## Learn More
+This UI is **ready for integration with a backend API** for todo persistence.  
+See `src/App.js` for locations marked with comments (e.g., "Backend API for...") to hook your API requests (fetch/axios).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Styling and Customization
 
-### Code Splitting
+- Styles are managed in `src/App.css`
+- Colors are set using CSS variables:
+  - `--kavia-primary`, `--kavia-accent`, `--kavia-secondary`
+- Modify layout or add more features as needed!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Accessibility
 
-### Analyzing the Bundle Size
+- Uses semantic controls and accessible button labels
+- Double-click or use button to edit todos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Credits
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Template bootstrapped with [KAVIA lightweight React template].  
+Modern UI developed for code-generation test containers.

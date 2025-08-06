@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders main header and add-input", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/Simple Todo App/i)).toBeInTheDocument();
+  const input = screen.getByPlaceholderText(/What needs to be done/i);
+  expect(input).toBeInTheDocument();
+  expect(input).toHaveValue("");
+});
+
+test("renders filter buttons", () => {
+  render(<App />);
+  expect(screen.getByRole("button", { name: "All" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "Active" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "Completed" })).toBeInTheDocument();
 });
